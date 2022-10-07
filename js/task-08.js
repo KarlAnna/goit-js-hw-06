@@ -13,14 +13,11 @@ function onFormSubmit(event) {
         emailInputEl.value === null || passwordInputEl.value === null
         || emailInputEl.value === '' || passwordInputEl.value === ''
     ) {
-        alert('Всі поля мають бути заповнені!')
+        return alert('Всі поля мають бути заповнені!')
     }
     // 4
     const formData = new FormData(event.currentTarget)
     // 5
-    formData.forEach((value, name) => {
-        console.log(name + ': ' + value)
-    })
+    console.log(formData);
     event.currentTarget.reset()
 }
-
