@@ -18,6 +18,11 @@ function onFormSubmit(event) {
     // 4
     const formData = new FormData(event.currentTarget)
     // 5
-    console.log(formData);
+    const formObject = {}
+    formData.forEach((value, name) => {
+        formObject[name] = value
+    })
+    console.log(formObject);
+    
     event.currentTarget.reset()
 }
